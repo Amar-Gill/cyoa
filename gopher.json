@@ -9,11 +9,11 @@
     "options": [
       {
         "text": "That story about the Sticky Bandits isn't real, it is from Home Alone 2! Let's head to New York.",
-        "arc": "new-york"
+        "chapter": "new-york"
       },
       {
         "text": "Gee, those bandits sound pretty real to me. Let's play it safe and try our luck in Denver.",
-        "arc": "denver"
+        "chapter": "denver"
       }
     ]
   },
@@ -29,11 +29,11 @@
     "options": [
       {
         "text": "This is getting too weird for me. Let's bail and head back home.",
-        "arc": "home"
+        "chapter": "home"
       },
       {
         "text": "Maybe people just dress funny in the big city. Grab a a seat and see what happens.",
-        "arc": "debate"
+        "chapter": "debate"
       }
     ]
   },
@@ -45,15 +45,15 @@
     "options": [
       {
         "text": "Clearly that man in the fox outfit was the winner.",
-        "arc": "sean-kelly"
+        "chapter": "sean-kelly"
       },
       {
         "text": "I don't think those fake abs would help much in a feat of strength, but our caped friend clearly won this bout. Let's go congratulate him.",
-        "arc": "mark-bates"
+        "chapter": "mark-bates"
       },
       {
         "text": "Slip out the back before anyone asks us to pick a side.",
-        "arc": "home"
+        "chapter": "home"
       }
     ]
   },
@@ -68,7 +68,7 @@
     "options": [
       {
         "text": "You change your flight to leave early and head to the airport in the morning.",
-        "arc": "home"
+        "chapter": "home"
       }
     ]
   },
@@ -83,7 +83,7 @@
     "options": [
       {
         "text": "Pack your bags and head to bed. We have a long flight in the morning.",
-        "arc": "home"
+        "chapter": "home"
       }
     ]
   },
@@ -98,7 +98,7 @@
     "options": [
       {
         "text": "Pack your bags and head to bed. We have a long flight in the morning.",
-        "arc": "home"
+        "chapter": "home"
       }
     ]
   },
