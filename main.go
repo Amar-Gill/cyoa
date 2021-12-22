@@ -18,6 +18,7 @@ type Option struct {
 	Text    string
 	Chapter string
 }
+
 type PageData struct {
 	Intro     Chapter
 	NewYork   Chapter
