@@ -26,6 +26,7 @@ type PageData struct {
 	SeanKelly Chapter
 	MarkBates Chapter
 	Home      Chapter
+	Denver    Chapter
 }
 
 func main() {
