@@ -2,6 +2,7 @@ package cyoa
 
 import (
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -22,6 +23,7 @@ type handler struct {
 	s Story
 }
 
+// assign ServeHTTP method to handler struct, so that it implements http.Handler interface
 func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("template.html"))
 
@@ -32,8 +34,15 @@ func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 	path = path[1:]
 
-	chapter := h.s[path]
-	tmpl.Execute(w, chapter)
+	if chapter, ok := h.s[path]; ok {
+		err := tmpl.Execute(w, chapter)
+		if err != nil {
+			log.Printf("%v", err)
+			http.Error(w, "Something went wrong...", http.StatusInternalServerError)
+		}
+		return
+	}
+	http.Error(w, "Chapter not found.", http.StatusNotFound)
 }
 
 func NewHandler(s Story) http.Handler {
