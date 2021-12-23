@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CYOA</title>
-  </head>
-  <body>
-    <h1>{{.Intro.Title}}</h1>
-    <main>
-      {{range .Intro.Story}}
-      <p>{{.}}</p>
-      {{end}}
-    </main>
-    <footer>
-      {{ range .Intro.Options}}
-      <p><span>{{.Text}} -></span> <button>{{.Chapter}}</button></p>
-      {{end}}
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYOA</title>
+</head>
+
+<body>
+  <h1>{{.Title}}</h1>
+  <main>
+    {{range .Paragraphs}}
+    <p>{{.}}</p>
+    {{end}}
+  </main>
+  <footer>
+    {{ range .Options}}
+    <ul>
+      <li>
+        <a href="{{.Chapter}}">{{.Text}}</a>
+      </li>
+    </ul>
+    {{end}}
+  </footer>
+</body>
+
 </html>
