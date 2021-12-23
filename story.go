@@ -23,10 +23,14 @@ type handler struct {
 	s Story
 }
 
+var tmpl *template.Template
+
+func init() {
+	tmpl = template.Must(template.ParseFiles("template.html"))
+}
+
 // assign ServeHTTP method to handler struct, so that it implements http.Handler interface
 func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("template.html"))
-
 	path := r.URL.Path
 
 	if path == "/" || path == "" {
